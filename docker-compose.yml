@@ -1,0 +1,9 @@
+services:
+  pdf-bot:
+    build: .
+    container_name: pdf_converter_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./downloads:/app/downloads
